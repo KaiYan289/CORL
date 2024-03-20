@@ -24,7 +24,7 @@ TensorBatch = List[torch.Tensor]
 class TrainConfig:
     # Experiment
     device: str = "cuda"
-    env: str = "halfcheetah-medium-expert-v2"  # OpenAI gym environment name
+    env: str = "hammer-expert-v1"  # OpenAI gym environment name
     seed: int = 0  # Sets Gym, PyTorch and Numpy seeds
     eval_freq: int = int(5e3)  # How often (time steps) we evaluate
     n_episodes: int = 10  # How many episodes run during evaluation
@@ -32,7 +32,7 @@ class TrainConfig:
     checkpoints_path: Optional[str] = None  # Save path
     load_model: str = ""  # Model load file name, "" doesn't load
     # TD3
-    buffer_size: int = 2_000_000  # Replay buffer size
+    buffer_size: int = 2000000  # Replay buffer size 
     batch_size: int = 256  # Batch size for all networks
     discount: float = 0.99  # Discount ffor
     expl_noise: float = 0.1  # Std of Gaussian exploration noise
